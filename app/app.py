@@ -1,9 +1,11 @@
 import streamlit as st
 import googlemaps
 from datetime import datetime
+import toml
 
+secrets = toml.load("secrets.toml")
 # Replace YOUR_API_KEY with your actual API key
-gmaps = googlemaps.Client(key='AIzaSyDfAsXwd2-eoRG121tgo766uqkuToEBpBc')
+gmaps = googlemaps.Client(key=secrets["google"]["api_key"])
 
 # Add a title and some instructions
 st.title("Distance Calculator")
