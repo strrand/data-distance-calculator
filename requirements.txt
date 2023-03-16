@@ -3,3 +3,4 @@ googlemaps
 datetime
 secrets
 pyOpenSSL
+toml
