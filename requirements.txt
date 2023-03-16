@@ -2,3 +2,4 @@ streamlit
 googlemaps
 datetime
 secrets
+pyOpenSSL
