@@ -2,11 +2,15 @@ import streamlit as st
 import googlemaps
 import pandas as pd
 from datetime import datetime
-import toml
+import yaml
 
-secrets = toml.load("secrets.toml")
+with open("config.yaml", "r") as f:
+    config = yaml.safe_load(f)
+
+api_key = config["api_key"]
+
 # Replace YOUR_API_KEY with your actual API key
-gmaps = googlemaps.Client(key=secrets["google"]["api_key"])
+gmaps = googlemaps.Client(key=api_key)
 
 def filter_garage_list_by_car_model(excel_file_path, car_model):
     # read Excel file
