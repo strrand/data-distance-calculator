@@ -49,7 +49,7 @@ def get_shortest_distances(filtered_df, destination):
         st.write(f"{i+1}. The distance between {garage}, {origin} and {destination} is {distance}")
 
 # Add a title and some instructions
-st.title("Distance Calculator")
+st.title("Distance Calculator Garages")
 st.write("Enter the car model and current address below:")
 
 # Use Streamlit text input widgets to get the car model and current address from the user
