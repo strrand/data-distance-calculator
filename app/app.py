@@ -22,8 +22,11 @@ def filter_garage_list_by_car_model(excel_file_path, car_model):
     # fill null values in the "Auktoriserade märken (OBS!)" column with "unknown"
     df['Auktoriserade märken (OBS!)'].fillna(value='unknown', inplace=True)
 
+    # Convert car_model to lowercase
+    car_model = car_model.lower()
+
     # Filter the rows where the specified car model is present in the "Auktoriserade märken (OBS!)" column
-    filtered_df = df.loc[df["Auktoriserade märken (OBS!)"].str.contains(fr"\b{car_model}\b", case=False, regex=True)]
+    filtered_df = df.loc[df["Auktoriserade märken (OBS!)"].str.lower().str.contains(fr"\b{car_model}\b", case=False, regex=True)]
 
     return filtered_df
 
@@ -54,6 +57,9 @@ def get_shortest_distances(filtered_df, destination):
     st.write("The top 3 shortest garage distances are:")
     for i, (origin, garage, distance) in enumerate(distances[:3]):
         st.write(f"{i+1}. The distance between {garage}, {origin} and {destination} is {distance}")
+
+# Set the theme configuration
+#st.set_theme({'primaryColor': 'orange'})
 
 # Add a title and some instructions
 st.title("Distance Calculator Garages")
