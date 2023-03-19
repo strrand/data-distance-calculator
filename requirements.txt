@@ -1,6 +1,9 @@
 streamlit
 googlemaps
 datetime
-secrets
 pyOpenSSL
 toml
+pyopenssl
+python-ldap==3.3.0
+pandas
+python-dotenv
