@@ -3,6 +3,3 @@ googlemaps
 datetime
 toml
 pandas
-fastapi
-pytz
-uvicorn
