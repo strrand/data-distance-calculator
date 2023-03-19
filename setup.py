@@ -13,7 +13,7 @@ setup(name='app',
       #author_email="contact@lewagon.org",
       url="https://github.com/strrand/data-distance-calculator",
       install_requires=requirements,
-      packages=find_packages(exclude=("notebooks","api","interface")),
+      packages=find_packages(exclude=("notebooks")),
       test_suite="tests",
       # include_package_data: to install data from MANIFEST.in
       include_package_data=True,
