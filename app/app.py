@@ -3,11 +3,14 @@ import googlemaps
 import pandas as pd
 from datetime import datetime
 import yaml
+# import os
 
 with open("config.yaml", "r") as f:
     config = yaml.safe_load(f)
 
 api_key = config["api_key"]
+
+# api_key = os.environ.get("api_key")
 
 # Replace YOUR_API_KEY with your actual API key
 gmaps = googlemaps.Client(key=api_key)
