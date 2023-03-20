@@ -4,4 +4,4 @@ datetime
 toml
 pandas
 PyYAML==5.4.1
-dotenv
+python-dotenv==0.19.1
