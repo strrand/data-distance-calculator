@@ -1,6 +1,6 @@
 streamlit
 googlemaps
 datetime
-yaml
+yaml==0.2.5
 toml
 pandas
