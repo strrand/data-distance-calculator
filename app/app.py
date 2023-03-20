@@ -2,15 +2,19 @@ import streamlit as st
 import googlemaps
 import pandas as pd
 from datetime import datetime
-import yaml
-# import os
+# import yaml
+import os
+from dotenv import load_dotenv
 
-with open("config.yaml", "r") as f:
-    config = yaml.safe_load(f)
+# Load variables from .env file
+load_dotenv()
 
-api_key = config["api_key"]
+#with open("config.yaml", "r") as f:
+ #   config = yaml.safe_load(f)
 
-# api_key = os.environ.get("api_key")
+#api_key = config["api_key"]
+
+api_key = os.getenv("api_key")
 
 # Replace YOUR_API_KEY with your actual API key
 gmaps = googlemaps.Client(key=api_key)
