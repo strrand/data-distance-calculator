@@ -70,7 +70,7 @@ col1, col2 = st.columns([2, 1])
 with col1:
     st.title("Preferred Garage Distance")
 with col2:
-    st.image('/home/strrand/code/strrand/data-distance-calculator/image/nissan3.png')
+    st.image('/home/strrand/code/strrand/data-distance-calculator/app/nissan3.png')
 
 st.write("Enter the car model and current address below:")
 
