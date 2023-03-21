@@ -16,6 +16,8 @@ load_dotenv()
 
 api_key = os.getenv("api_key")
 
+api_key = st.secrets['api_key']
+
 # Replace YOUR_API_KEY with your actual API key
 gmaps = googlemaps.Client(key=api_key)
 
@@ -37,6 +39,7 @@ def filter_garage_list_by_car_model(excel_file_path, car_model):
 def get_shortest_distances(filtered_df, destination):
     # Define an empty list to store the distances
     distances = []
+
 
     # Loop over the filtered addresses and get the distances
     for index, row in filtered_df.iterrows():
@@ -65,6 +68,7 @@ def get_shortest_distances(filtered_df, destination):
 # Set the theme configuration
 #st.set_theme({'primaryColor': 'orange'})
 
+api_key = st.secrets['api_key']
 # Add a title and some instructions
 st.title("Distance Calculator Garages")
 st.write("Enter the car model and current address below:")
