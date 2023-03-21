@@ -3,6 +3,14 @@ import googlemaps
 import pandas as pd
 from datetime import datetime
 
+# Set the page configuration
+st.set_page_config(
+    page_title="Preferred Garage Distance",
+    page_icon=":car:",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
+
 api_key = st.secrets['api_key'] #['my_secrets']
 
 # Replace YOUR_API_KEY with your actual API key
@@ -57,7 +65,13 @@ def get_shortest_distances(filtered_df, destination):
 
 #api_key = st.secrets['api_key']
 # Add a title and some instructions
-st.title("Distance Calculator Garages")
+# Add the title and some instructions
+col1, col2 = st.columns([2, 1])
+with col1:
+    st.title("Preferred Garage Distance")
+with col2:
+    st.image('/home/strrand/code/strrand/data-distance-calculator/image/nissan.jpg')
+
 st.write("Enter the car model and current address below:")
 
 # Use Streamlit text input widgets to get the car model and current address from the user
