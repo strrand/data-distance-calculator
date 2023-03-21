@@ -55,7 +55,7 @@ def get_shortest_distances(filtered_df, destination):
 # Set the theme configuration
 #st.set_theme({'primaryColor': 'orange'})
 
-api_key = st.secrets['api_key']
+#api_key = st.secrets['api_key']
 # Add a title and some instructions
 st.title("Distance Calculator Garages")
 st.write("Enter the car model and current address below:")
