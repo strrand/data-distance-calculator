@@ -3,13 +3,6 @@ import googlemaps
 import pandas as pd
 from datetime import datetime
 
-# Set the page configuration
-st.set_page_config(
-    page_title="Preferred Garage Distance",
-    page_icon=":car:",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
 
 api_key = st.secrets['api_key'] #['my_secrets']
 
@@ -60,11 +53,14 @@ def get_shortest_distances(filtered_df, destination):
     for i, (origin, garage, distance) in enumerate(distances[:3]):
         st.write(f"{i+1}. The distance between {garage}, {origin} and {destination} is {distance}")
 
-# Set the theme configuration
-#st.set_theme({'primaryColor': 'orange'})
+# Set the page configuration
+st.set_page_config(
+    page_title="Preferred Garage Distance",
+    page_icon=":car:",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
 
-#api_key = st.secrets['api_key']
-# Add a title and some instructions
 # Add the title and some instructions
 col1, col2 = st.columns([2, 1])
 with col1:
