@@ -3,6 +3,4 @@ googlemaps
 datetime
 toml
 pandas
-PyYAML==5.4.1
-python-dotenv==0.19.1
 secrets
