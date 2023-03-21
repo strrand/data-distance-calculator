@@ -3,20 +3,20 @@ import googlemaps
 import pandas as pd
 from datetime import datetime
 # import yaml
-import os
-from dotenv import load_dotenv
+#import os
+#from dotenv import load_dotenv
 
 # Load variables from .env file
-load_dotenv()
+#load_dotenv()
 
 #with open("config.yaml", "r") as f:
  #   config = yaml.safe_load(f)
 
 #api_key = config["api_key"]
 
-api_key = os.getenv("api_key")
+#api_key = os.getenv("api_key")
 
-api_key = st.secrets['api_key']
+api_key = st.secrets['api_key'] #['my_secrets']
 
 # Replace YOUR_API_KEY with your actual API key
 gmaps = googlemaps.Client(key=api_key)
