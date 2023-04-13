@@ -32,7 +32,7 @@ def get_shortest_distances(filtered_df, destination):
     # Loop over the filtered addresses and get the distances
     for index, row in filtered_df.iterrows():
         # Get the origin and destination addresses
-        origin = f"{row['Adress']}"
+        origin = f"{row['Adress']}, {row['Ort / Stad']}"
         garage = f"{row['Verkstad']}"
 
         # Send a request to the API to get distance information
