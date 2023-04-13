@@ -2,7 +2,9 @@ import streamlit as st
 import googlemaps
 import pandas as pd
 from datetime import datetime
+from pathlib import Path
 
+pkl_path = Path(__file__).parents[1] / '/home/strrand/code/strrand/data-distance-calculator/data/DAMAGE_GARAGE_LIST.xlsx'
 
 api_key = st.secrets['api_key'] #['my_secrets']
 
@@ -76,5 +78,5 @@ destination = st.text_input("Current Address")
 
 # Use a Streamlit button to trigger the calculation
 if st.button("Calculate Distance"):
-    filtered_df = filter_garage_list_by_car_model('/home/strrand/code/strrand/data-distance-calculator/data/DAMAGE_GARAGE_LIST.xlsx', car_model)
+    filtered_df = filter_garage_list_by_car_model(pkl_path, car_model)
     get_shortest_distances(filtered_df, destination)
