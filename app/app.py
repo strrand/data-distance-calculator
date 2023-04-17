@@ -7,10 +7,10 @@ import os
 
 # Get the path of the directory where this script is located
 dirname = os.path.dirname(__file__)
-
+print(dirname)
 # Define the relative path to the Excel file
-excel_file_path = os.path.join(dirname, "/home/strrand/code/strrand/data-distance-calculator/data/DAMAGE_GARAGE_LIST.xlsx")
-
+excel_file_path = os.path.join(dirname, "/home/strrand/code/strrand/data-distance-calculator/app/DAMAGE_GARAGE_LIST.xlsx")
+print(excel_file_path)
 #pkl_path = Path(__file__).parents[1] / '/home/strrand/code/strrand/data-distance-calculator/data/DAMAGE_GARAGE_LIST.xlsx'
 
 api_key = st.secrets['api_key'] #['my_secrets']
