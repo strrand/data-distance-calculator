@@ -22,6 +22,7 @@ api_key = st.secrets['api_key'] #['my_secrets']
 gmaps = googlemaps.Client(key=api_key)
 
 def filter_garage_list_by_car_model(excel_file_path, car_model):
+    print("Excel file path:", excel_file_path)
     # read Excel file
     df = pd.read_excel(excel_file_path)
 
