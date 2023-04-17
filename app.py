@@ -24,7 +24,7 @@ gmaps = googlemaps.Client(key=api_key)
 def filter_garage_list_by_car_model(excel_file_path, car_model):
     print("Excel file path:", excel_file_path)
     # read Excel file
-    df = pd.read_excel(excel_file_path)
+    df = pd.read_csv(excel_file_path)
 
     # fill null values in the "Auktoriserade märken (OBS!)" column with "unknown"
     df['Auktoriserade märken (OBS!)'].fillna(value='unknown', inplace=True)
