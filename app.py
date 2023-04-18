@@ -89,10 +89,10 @@ with col1:
 with col2:
     st.image('https://ev-database.org/img/auto/Nissan_Leaf_2018/Nissan_Leaf_2018-01.jpg')
 
-st.write("Enter the car model and current address below:")
+st.write("Enter the car make and current address below:")
 
 # Use Streamlit text input widgets to get the car model and current address from the user
-car_model = st.text_input("Car Model")
+car_model = st.text_input("Car Make")
 destination = st.text_input("Current Address")
 
 # Use a Streamlit button to trigger the calculation
