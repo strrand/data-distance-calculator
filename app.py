@@ -2,10 +2,9 @@ import streamlit as st
 import googlemaps
 import pandas as pd
 from datetime import datetime
-#import requests
-#import io
 import gdown
-# Replace the file ID with your own
+
+#google drive: file id
 file_id = '11b0MJVrXV38Oy4gvmIcZpuRnQEAA52BQ'
 
 url = f'https://drive.google.com/uc?id={file_id}'
@@ -13,20 +12,9 @@ excel_file_path = 'DAMAGE-GARAGE-LIST.csv'
 
 gdown.download(url, excel_file_path, quiet=False)
 
-# Construct the URL to download the file
-#url = f'https://drive.google.com/uc?id={file_id}'
-
-# Download the file and read it into a pandas DataFrame
-#file_content = requests.get(url).content
-#df = pd.read_csv(io.StringIO(file_content.decode('utf-8')))
-#from pathlib import Path
-#import os
-
-#excel_file_path = st.secrets['excel_path'] #['my_secrets']
-#excel_file_path = io.StringIO(file_content.decode('utf-8'))
 api_key = st.secrets['api_key'] #['my_secrets']
 
-# Replace YOUR_API_KEY with your actual API key
+#google maps api_key
 gmaps = googlemaps.Client(key=api_key)
 
 def filter_garage_list_by_car_model(excel_file_path, car_model):
@@ -48,7 +36,6 @@ def filter_garage_list_by_car_model(excel_file_path, car_model):
 def get_shortest_distances(filtered_df, destination):
     # Define an empty list to store the distances
     distances = []
-
 
     # Loop over the filtered addresses and get the distances
     for index, row in filtered_df.iterrows():
