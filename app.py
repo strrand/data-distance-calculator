@@ -14,7 +14,6 @@ gmaps = googlemaps.Client(key=api_key)
 
 def filter_garage_list_by_car_model(excel_file_path, car_model):
 
-    st.write(f"Excel file path: {excel_file_path}") # added this line
     # read Excel file
     df = pd.read_csv(excel_file_path)
 
