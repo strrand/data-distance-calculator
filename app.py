@@ -59,7 +59,7 @@ def get_shortest_distances(filtered_df, destination):
     # Display the top 3 shortest distances to the user
     st.write("The top 3 shortest garage distances are:")
     for i, (origin, garage, distance) in enumerate(distances[:3]):
-        st.write(f"{i+1}. The distance between {garage}, {origin} and {destination} is {distance}")
+        st.write(f"{i+1}. The distance between {garage}, {origin} and {destination} is {distance:.1f} km")
 
 # Set the page configuration
 st.set_page_config(
