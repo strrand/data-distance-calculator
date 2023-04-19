@@ -48,7 +48,7 @@ def get_shortest_distances(filtered_df, destination):
         directions_result = gmaps.directions(origin, destination, mode="driving", departure_time=now)
 
         # Parse the response to extract the distance information
-        distance = directions_result[0]['legs'][0]['distance']['text']
+        distance = directions_result[0]['legs'][0]['distance']['value'] / 1000  # Convert to km
 
         # Add the distance to the list
         distances.append((origin, garage, distance))
